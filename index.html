@@ -57,23 +57,23 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <label id="totalTicket" for="">First Class ($150)</label>
+                    <input id="countTicket" class="inp-style inp-width" type="number" name="" value="0";>
                 </div>
                 <div class="plus-minus-btn">
-                    <button class="btn"></i>+</button>
-                    <button class="btn"></i>-</button>
+                    <button id="addTicketFirstClass" class="btn"></i>+</button>
+                    <button id="dropTicketFirstClass" class="btn"></i>-</button>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
-                    <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <label id="total-Ticket" for="">Economy Class ($100)</label>
+                    <input id="count-Ticket" class="inp-style inp-width" type="number" name="" value="0";>
                 </div>
                 <div class="plus-minus-btn">
-                    <button class="btn"></i>+</button>
-                    <button class="btn"></i>-</button>
+                    <button id="addTicketEconomyClass" class="btn"></i>+</button>
+                    <button id="dropTicketEconomyClass" class="btn"></i>-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -107,7 +107,50 @@
             <button class="btn-style">Book Now</button>
         </div>
     </main>
+<script>
 
+    // First Class increase number
+    document.getElementById('addTicketFirstClass').addEventListener('click', function(){
+const ticketInput = document.getElementById('countTicket');
+const ticketCount = parseInt (ticketInput.value);
+const ticketNewCount = ticketCount + 1;
+ticketInput.value = ticketNewCount;
+const totalTicket = ticketNewCount * 150;
+document.getElementById('totalTicket').innerText = '$' + totalTicket;
+    });
+
+    // First Class decrease number
+    document.getElementById('dropTicketFirstClass').addEventListener('click', function(){
+const ticketInput = document.getElementById('countTicket');
+const ticketCount = parseInt (ticketInput.value);
+const ticketNewCount = ticketCount - 1;
+ticketInput.value = ticketNewCount;
+const totalTicket = ticketNewCount * 150;
+document.getElementById('total-Ticket').innerText = '$' + totalTicket;
+    });
+
+// Economy increase number
+    document.getElementById('addTicketEconomyClass').addEventListener('click', function(){
+const ticketInput = document.getElementById('count-Ticket');
+const ticketCount = parseInt (ticketInput.value);
+const ticketNewCount = ticketCount + 1;
+ticketInput.value = ticketNewCount;
+const totalTicket = ticketNewCount * 100;
+document.getElementById('total-Ticket').innerText = '$' + totalTicket;
+    });
+    
+    // First Class decrease number
+        document.getElementById('dropTicketEconomyClass').addEventListener('click', function(){
+const ticketInput = document.getElementById('count-Ticket');
+const ticketCount = parseInt (ticketInput.value);
+const ticketNewCount = ticketCount - 1;
+ticketInput.value = ticketNewCount;
+const totalTicket = ticketNewCount * 100;
+document.getElementById('total-Ticket').innerText = '$' + totalTicket;
+        });
+
+
+</script>
     <!--Thank You-->
 </body>
 
