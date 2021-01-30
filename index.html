@@ -126,7 +126,7 @@ const ticketCount = parseInt (ticketInput.value);
 const ticketNewCount = ticketCount - 1;
 ticketInput.value = ticketNewCount;
 const totalTicket = ticketNewCount * 150;
-document.getElementById('total-Ticket').innerText = '$' + totalTicket;
+document.getElementById('totalTicket').innerText = '$' + totalTicket;
     });
 
 // Economy increase number
@@ -138,8 +138,8 @@ ticketInput.value = ticketNewCount;
 const totalTicket = ticketNewCount * 100;
 document.getElementById('total-Ticket').innerText = '$' + totalTicket;
     });
-    
-    // First Class decrease number
+
+    // Economy Class decrease number
         document.getElementById('dropTicketEconomyClass').addEventListener('click', function(){
 const ticketInput = document.getElementById('count-Ticket');
 const ticketCount = parseInt (ticketInput.value);
